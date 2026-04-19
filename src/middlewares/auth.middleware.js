@@ -4,7 +4,7 @@ export const protect = (req, res, next) => {
         const  authheader = req.headers['authorization'];
 
         if (!authheader){
-            return res.status(401).json({ message: "Authorization header missing" });
+            return res.status(401).json({ message: "Authorization header missing " });
         }
         const token = authheader && authheader.split(' ')[1];
 
